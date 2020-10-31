@@ -6,8 +6,7 @@ import java.util.Locale;
 public class DecimalNumberTools {
 
     public static boolean isInteger(float n){
-        int i=(int)n;
-        return n-i==0;
+        return (int)n==n;
     }
 
     public static String formatFloat(float n,int digitsAfterPoint){
