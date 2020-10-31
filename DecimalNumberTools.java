@@ -45,10 +45,16 @@ public class DecimalNumberTools {
         return bA.subtract(bB).floatValue();
     }
 
+      public static float divide(float a,float b,int scale){
+        BigDecimal bA=new BigDecimal(Float.toString(a));
+        BigDecimal bB=new BigDecimal(Float.toString(b));
+        return bA.divide(bB,scale, RoundingMode.CEILING).floatValue();
+    }
+
     public static float divide(float a,float b){
         BigDecimal bA=new BigDecimal(Float.toString(a));
         BigDecimal bB=new BigDecimal(Float.toString(b));
-        return bA.divide(bB,3, RoundingMode.CEILING).floatValue();
+        return bA.divide(bB,RoundingMode.CEILING).floatValue();
     }
 
     public static float roundTo(float a,int n){
